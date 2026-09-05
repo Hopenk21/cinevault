@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+﻿import React, { useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { ArrowLeft, Play, Monitor, AlertCircle } from 'lucide-react'
 
@@ -156,7 +156,6 @@ function WatchPage({ API_URL }) {
               className="w-full h-full"
               allowFullScreen
               allow="autoplay; encrypted-media; picture-in-picture"
-              sandbox="allow-scripts allow-same-origin allow-presentation allow-popups"
               onError={() => setIframeError(true)}
               title={`${movie.title} - ${currentServer.name}`}
             />
@@ -258,3 +257,4 @@ function WatchPage({ API_URL }) {
 }
 
 export default WatchPage
+
