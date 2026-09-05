@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-netflix-black text-white;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+}
+
+@layer components {
+  .movie-row {
+    @apply flex gap-2 overflow-x-scroll pb-6 pt-2 px-4;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .movie-row::-webkit-scrollbar {
+    display: none;
+  }
+
+  .movie-card {
+    @apply relative flex-shrink-0 cursor-pointer transition-all duration-300;
+    width: 200px;
+  }
+
+  .movie-card:hover {
+    @apply z-10 scale-110;
+  }
+
+  .hero-gradient {
+    background: linear-gradient(to top, #141414 0%, transparent 60%, rgba(0,0,0,0.7) 100%);
+  }
+
+  .nav-gradient {
+    background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, transparent 100%);
+  }
+}
