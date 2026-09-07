@@ -22,7 +22,6 @@ services:
       - NODE_ENV=development
       - PGSSL=false
       - DATABASE_URL=postgresql://postgres:postgres@db:5432/cinevault
-      - FRONTEND_URL=http://localhost:5173,https://cinevault.surge.sh
     ports:
       - "5000:5000"
     depends_on:
